@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>8CodeBubble</title>
+    <link href="https://8codebubble.com/feed.xml" rel="self" />
+    <link href="https://8codebubble.com" />
+    <updated>2024-06-04T05:30:46+09:00</updated>
+    <author>
+        <name>ymcadmin</name>
+    </author>
+    <id>https://8codebubble.com</id>
+
+    <entry>
+        <title>Viewing Tech demo of 3D Gaussian Splatting on Quest3.</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3.html"/>
+        <id>https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3.html</id>
+        <media:content url="https://8codebubble.com/media/posts/1/oniri.png" medium="image" />
+            <category term="VR"/>
+            <category term="Quest3"/>
+            <category term="Games"/>
+
+        <updated>2024-03-07T03:06:00+09:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/1/oniri.png" class="type:primaryImage" alt="" /></p>
+                <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/JDrj50fKr00" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Can’t Read Superblock (Corrupted Persistent Volume fixed)</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/cant-read-superblock-corrupted-persistent-volume-fixed.html"/>
+        <id>https://8codebubble.com/cant-read-superblock-corrupted-persistent-volume-fixed.html</id>
+        <media:content url="https://8codebubble.com/media/posts/2/cant-read-superblock3-fixitmen.jpg" medium="image" />
+            <category term="Linux"/>
+            <category term="HomeLab"/>
+
+        <updated>2023-11-19T03:47:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/2/cant-read-superblock3-fixitmen.jpg" alt="" />
+                    I had a close call when a service refused to boot on my Kubernetes cluster. On startup the service reported a mounting error for the PV (sorry didn’t record it but it was similar to the one below) can't read superblock on /dev/sdc The main&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/2/cant-read-superblock3-fixitmen.jpg" class="type:primaryImage" alt="" /></p>
+                <p>I had a close call when a service refused to boot on my Kubernetes cluster.</p>
+<p>On startup the service reported a mounting error for the PV (sorry didn’t record it but it was similar to the one below)</p>
+<p><code>can't read superblock on /dev/sdc</code></p>
+<p>The main issues is the disk is corrupted for whatever reason.</p>
+<p>For a quick solution restored for backup, if your unable todo this and you have access to the node your 2nd option is also simple.</p>
+<p>SSH into the node and run fsck against the offending /dev/???? device.</p>
+<p>In my case I had to get the serial number of the block device from Truenas which I use as my block and nfs storage appliance/service.</p>
+<figure class="wp-block-image size-large"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image-1.png" data-lbwps-width="2296" data-lbwps-height="135" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-1-300x18.png"><figure class="wp-image-567"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/11/image-1-1024x60.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image-1-1024x60.png 1024w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-300x18.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-768x45.png 768w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-1536x90.png 1536w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-2048x120.png 2048w" alt="" width="1024" height="60" data-is-external-image="true"></figure></a></figure>
+<p>Which I then match to the device from cockpit storage view</p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-full"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png" data-lbwps-width="943" data-lbwps-height="526" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-2-300x167.png"><figure class="wp-image-568"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png" sizes="(max-width: 943px) 100vw, 943px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png 943w, https://8codebubble.com/wp-content/uploads/2023/11/image-2-300x167.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-2-768x428.png 768w" alt="" width="943" height="526" data-id="568" data-is-external-image="true"></figure></a></figure>
+</figure>
+<p>Then simple run fsck command as seen below.</p>
+<figure class="wp-block-image size-full"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image.png" data-lbwps-width="918" data-lbwps-height="528" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-300x173.png"><figure class="wp-image-566"><img  src="https://8codebubble.com/wp-content/uploads/2023/11/image.png" sizes="(max-width: 918px) 100vw, 918px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image.png 918w, https://8codebubble.com/wp-content/uploads/2023/11/image-300x173.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-768x442.png 768w" alt="" width="918" height="528" loading="lazy" data-is-external-image="true"></figure></a></figure>
+<p>Crisis averted!</p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-full"></figure>
+</figure>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Changes to Pfsense product lineup!</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/changes-to-pfsense-product-lineup.html"/>
+        <id>https://8codebubble.com/changes-to-pfsense-product-lineup.html</id>
+        <media:content url="https://8codebubble.com/media/posts/3/Blog-Banners.webp" medium="image" />
+            <category term="Interest"/>
+            <category term="HomeLab"/>
+
+        <updated>2023-10-30T04:06:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/3/Blog-Banners.webp" alt="" />
+                    According to the article published on Netgate’s blog, the company has made some changes to its pfSense Plus software and Homelab. The changes include the removal of the pfSense Plus Community Edition and the introduction of a new pfSense Plus Home Edition¹. The new edition is designed for home users and is&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/3/Blog-Banners.webp" class="type:primaryImage" alt="" /></p>
+                <p>According to the article published on <strong>Netgate’s blog</strong>, the company has made some changes to its <strong>pfSense Plus</strong> software and <strong>Homelab</strong>. The changes include the removal of the <strong>pfSense Plus Community Edition</strong> and the introduction of a new <strong>pfSense Plus Home Edition</strong>¹. The new edition is designed for home users and is available for free. It includes all the features of the Community Edition, as well as additional features such as <strong>VPN</strong>, <strong>DNS</strong>, and <strong>DHCP</strong>.</p>
+<p> </p>
+<p><a href="https://www.netgate.com/blog/addressing-changes-to-pfsense-plus-homelab">Addressing Changes to pfSense Plus Home+Lab (netgate.com)</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Here is a quick overview of services in my HomeLab :)</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/here-is-a-quick-overview-of-services-in-my-homelab.html"/>
+        <id>https://8codebubble.com/here-is-a-quick-overview-of-services-in-my-homelab.html</id>
+        <media:content url="https://8codebubble.com/media/posts/4/it-security-services-obj.png" medium="image" />
+            <category term="Interest"/>
+            <category term="HomeLab"/>
+
+        <updated>2023-10-22T04:10:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/4/it-security-services-obj.png" alt="" />
+                    There are lots of useful services and application one can use in a HomeLab and here are some that I have found useful in my personal HomeLab. I use these to simulate environments and research technologies I’m interested in. PFsense: PFsense is a free and open&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/4/it-security-services-obj.png" class="type:primaryImage" alt="" /></p>
+                <p>There are lots of useful services and application one can use in a HomeLab and here are some that I have found useful in my personal HomeLab. I use these to simulate environments and research technologies I’m interested in.</p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex"><figure class="post__image"><img loading="lazy"  src="https://8codebubble.com/media/posts/4/home-lab-layout.png" alt="" width="1761" height="1300" sizes="(max-width: 48em) 100vw, 768px" srcset="https://8codebubble.com/media/posts/4/responsive/home-lab-layout-xs.png 300w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-sm.png 480w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-md.png 768w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-lg.png 1024w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-xl.png 1360w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-2xl.png 1600w"></figure></figure>
+<ul>
+<li><strong>PFsense:</strong> PFsense is a free and open source firewall and router that also features unified threat management, load balancing, multi WAN, and more. PFsense is based on the OpenBSD operating system and can run on any hardware or virtual machine. PFsense provides a web interface for easy configuration and management of your network security. Learn more about PFsense at <a is="cib-link" rel="noreferrer noopener" href="https://www.pfsense.org/" target="_blank">their website</a>.</li>
+<li><strong>TrueNas:</strong> TrueNas is a powerful and flexible storage solution that lets you store, share, and protect your data. TrueNas is built on the OpenZFS file system, which offers advanced features like snapshots, replication, encryption, and deduplication. TrueNas can be deployed as a single node or a multi-node cluster, and supports various protocols such as SMB, NFS, iSCSI, and S3. You can also extend the functionality of TrueNas with plugins, such as Plex Media Server, NextCloud, Zoneminder, and more. Find out more about TrueNas at <a is="cib-link" rel="noreferrer noopener" href="https://www.truenas.com/" target="_blank">their website</a>.</li>
+<li><strong>MinIO:</strong> MinIO is a high-performance object storage system that is compatible with Amazon S3. MinIO is designed for large-scale data-intensive applications such as AI/ML, analytics, and cloud-native workloads. MinIO is software-defined and runs on any cloud or on-premises infrastructure. MinIO also offers features such as encryption, erasure coding, replication, and content signing. You can access MinIO from various clients, such as web browser, command line, SDKs, or REST API. Discover more about MinIO at <a is="cib-link" rel="noreferrer noopener" href="https://min.io/" target="_blank">their website</a>.</li>
+<li><strong>Guacamole:</strong> Guacamole is a free and open source remote desktop gateway that allows you to access your desktop from anywhere using a web browser. Guacamole supports various protocols such as RDP, VNC, SSH, and Telnet. Guacamole also provides features such as clipboard synchronization, file transfer, audio forwarding, and multi-user support. Guacamole is easy to install and configure, and can be integrated with authentication systems such as LDAP, CAS, or OpenID Connect. Explore more about Guacamole at <a is="cib-link" rel="noreferrer noopener" href="https://www.simplyrecipes.com/recipes/perfect_guacamole/" target="_blank">their website</a>.</li>
+<li><strong>Gitlab:</strong> Gitlab is a complete DevOps platform that enables you to plan, code, test, deploy, and monitor your software projects. Gitlab offers a web-based interface for managing repositories, issues, merge requests, pipelines, and more. Gitlab also provides tools for collaboration, security, automation, and analytics. Gitlab can be hosted on your own server or on the cloud. Gitlab is open source and has a large community of users and contributors. Learn more about Gitlab at <a is="cib-link" rel="noreferrer noopener" href="https://about.gitlab.com/" target="_blank">their website</a>.</li>
+<li><strong>Jellyfin:</strong> Jellyfin is a free and open source media system that lets you organize and stream your media collection to any device. Jellyfin supports various types of media such as movies, shows, music, books, photos, and live TV. Jellyfin also offers features such as metadata fetching, subtitles downloading, transcoding, SyncPlay, plugins, and themes. Jellyfin can be installed on any system with Docker or .NET Core runtime. Jellyfin has native apps for Android, iOS, Windows, macOS, Linux, and web browsers. Check out more about Jellyfin at <a is="cib-link" rel="noreferrer noopener" href="https://jellyfin.org/" target="_blank">their website</a>.</li>
+<li><strong>WordPress:</strong> WordPress is the most popular content management system (CMS) and blogging software in the world. WordPress allows you to create beautiful and functional websites with ease. WordPress has thousands of themes and plugins that you can use to customize your site according to your needs. WordPress also has a powerful editor that supports various formats such as text, images, audio, video, and code. WordPress can be hosted on your own server or on the cloud. WordPress is free and open source and has a huge community of users and developers. Find out more about WordPress at <a is="cib-link" rel="noreferrer noopener" href="https://wordpress.com/" target="_blank">their website</a>.</li>
+<li><strong>Nextcloud:</strong> Nextcloud is an open source cloud platform that gives you control over your data. Nextcloud enables you to store and sync your files across devices, share them with others securely, and collaborate on them in real time. Nextcloud also integrates with various services such as email, calendar, contacts, notes, tasks, chat, video calls, office suite, maps, news reader ,and more. Nextcloud can be installed on any server or on the cloud. Nextcloud is flexible and scalable and has a vibrant community of users and contributors. See more about Nextcloud at <a is="cib-link" rel="noreferrer noopener" href="https://nextcloud.com/" target="_blank">their website</a>.</li>
+<li><strong>Harbor Registry: </strong>Harbor Registry is an open source registry that stores and distributes container images securely. Harbor Registry supports various image formats such as Docker v2 , OCI , Helm , CNAB , OPA , Notary , etc . Harbor Registry also provides features such as vulnerability scanning , content signing , access control , replication , retention , quota , webhook , audit log , etc . Harbor Registry can be deployed on Kubernetes or on Docker. Harbor Registry is a CNCF graduated project and has a growing community of users and partners. Learn more about Harbor Registry at <a is="cib-link" rel="noreferrer noopener" href="https://goharbor.io/" target="_blank">their website</a>.</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>A new Raspberry Pi has been announced.</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/a-new-raspberry-pi-has-been-announced.html"/>
+        <id>https://8codebubble.com/a-new-raspberry-pi-has-been-announced.html</id>
+        <media:content url="https://8codebubble.com/media/posts/5/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" medium="image" />
+            <category term="Interest"/>
+            <category term="IOT Projects "/>
+            <category term="HomeLab"/>
+
+        <updated>2023-09-29T04:37:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/5/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" alt="" />
+                    The Raspberry Pi 5 was announced yesterday (Sep 28th) and is the latest and most powerful model of the popular single-board computer. CPU 2.4GHz quad-core 64-bit Arm Cortex-A76 GPU VideoCore VII RAM 4GB or 8GB LPDDR4 Display Dual 4Kp60 HDMI Wireless Dual-band 802.11ac Wi-Fi, Bluetooth&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/5/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" class="type:primaryImage" alt="" /></p>
+                <div class="article-featured-image prose prose-yuki mx-auto"><figure class="h-full object-center object-cover alignwide wp-post-image"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg 1024w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-300x300.jpg 300w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-150x150.jpg 150w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-768x768.jpg 768w" alt="" width="1024" height="1024" data-is-external-image="true"></figure></div>
+<div class="yuki-article-content yuki-entry-content clearfix mx-auto prose prose-yuki">
+<p>The Raspberry Pi 5 was announced yesterday (Sep 28th) and is the latest and most powerful model of the popular single-board computer.</p>
+<figure class="wp-block-image size-full"><figure class="wp-image-553"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5.webp" sizes="(max-width: 800px) 100vw, 800px" srcset="https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5.webp 800w, https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5-300x140.webp 300w, https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5-768x359.webp 768w" alt="" width="800" height="374" data-is-external-image="true"></figure></figure>
+<figure class="wp-block-table">
+<table>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>2.4GHz quad-core 64-bit Arm Cortex-A76</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>VideoCore VII</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>4GB or 8GB LPDDR4</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Dual 4Kp60 HDMI</td>
+</tr>
+<tr>
+<td>Wireless</td>
+<td>Dual-band 802.11ac Wi-Fi, Bluetooth 5.0</td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>Gigabit Ethernet</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>MicroSD card slot</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>2 x USB 3.0, 2 x USB 2.0</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>40-pin header</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>PCIe 2.0 x1 interface, power button, real-time clock, case and cooling system</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>$60 (4GB), $80 (8GB) (plus local taxes)</td>
+</tr>
+</tbody>
+</table>
+</figure>
+</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>The quest for 40Gbit.</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/the-quest-for-40gbit.html"/>
+        <id>https://8codebubble.com/the-quest-for-40gbit.html</id>
+        <media:content url="https://8codebubble.com/media/posts/6/image-1.png" medium="image" />
+            <category term="Networking"/>
+            <category term="Interest"/>
+            <category term="HomeLab"/>
+
+        <updated>2021-03-18T04:43:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/6/image-1.png" alt="" />
+                    Quick iperf speed test between ESXI and workstation.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/6/image-1.png" class="type:primaryImage" alt="" /></p>
+                <p>Quick iperf speed test between ESXI and workstation.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/6/gallery/image-2.png" data-size="363x450"><img loading="lazy" src="https://8codebubble.com/media/posts/6/gallery/image-2-thumbnail.png" alt="" width="363" height="450"></a></figure>
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/6/gallery/image-1-e1616109825122-1.png" data-size="978x491"><img loading="lazy" src="https://8codebubble.com/media/posts/6/gallery/image-1-e1616109825122-1-thumbnail.png" alt="" width="768" height="386"></a></figure>
+</div></div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Auto Update Route53</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/auto-update-route53.html"/>
+        <id>https://8codebubble.com/auto-update-route53.html</id>
+        <media:content url="https://8codebubble.com/media/posts/8/Screenshot-2023-10-16-103326.png" medium="image" />
+            <category term="MY-Software"/>
+            <category term="Linux"/>
+            <category term="Kubernetes"/>
+            <category term="HomeLab"/>
+            <category term="Docker"/>
+            <category term="Containers"/>
+
+        <updated>2019-10-10T05:02:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/8/Screenshot-2023-10-16-103326.png" alt="" />
+                    Description A docker container to auto update “A records” (main domain name not subdomains) for a given domain on Amazon’s AWS Route53. DockerHub Link auto-update-route53 My use case: Self-hosted services behind non-static IP address AKA your normal internet home connection. This updates the route53 A&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/8/Screenshot-2023-10-16-103326.png" class="type:primaryImage" alt="" /></p>
+                <h2>Description</h2>
+<p>A docker container to auto update “A records” (main domain name not subdomains) for a given domain on Amazon’s AWS Route53.</p>
+<p>DockerHub Link<br><a href="https://hub.docker.com/r/pyrocro/auto-update-route53">auto-update-route53</a></p>
+<p><strong>My use case:</strong><br>Self-hosted services behind non-static IP address AKA your normal internet home connection.<br>This updates the route53 A record with my dynamic IP address if it changes.</p>
+<h2>Environment variables:</h2>
+<ul>
+<li>AWS_REGION <i>{see AWS regions table below (e.g. us-east-1)}</i></li>
+<li>HOSTING_ZONE_ID <i>{get this from your AWS Route53 console management GUI}</i></li>
+<li>DOMAIN_NAME <i>{the domain who’s A record you would like updated automatically)</i></li>
+<li>ACCESS_KEY_ID <i>{AWS account access key with read/write access to Route53}</i></li>
+<li>SECRET_KEY <i>{secret key of the AWS account-obtain this when you created the user on AWS}</i></li>
+<li>SYNC_EVERY_SECONDS <i>{Check for mismatch of external IP address interval in seconds}</i></li>
+</ul>
+<p><strong>AWS regions</strong> (use value for HOSTING_ZONE_ID environment variable according to your region)</p>
+<table>
+<tbody>
+<tr>
+<th>Region</th>
+<th>Value</th>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Asia Pacific (Hong Kong)</td>
+<td>ap-east-1</td>
+</tr>
+<tr>
+<td>Asia Pacific (Tokyo)</td>
+<td>ap-northeast-1</td>
+</tr>
+<tr>
+<td>Asia Pacific (Seoul)</td>
+<td>ap-northeast-2</td>
+</tr>
+<tr>
+<td>Asia Pacific (Mumbai)</td>
+<td>ap-south-1</td>
+</tr>
+<tr>
+<td>Asia Pacific (Singapore)</td>
+<td>ap-southeast-1</td>
+</tr>
+<tr>
+<td>Asia Pacific (Sydney)</td>
+<td>ap-southeast-2</td>
+</tr>
+<tr>
+<td>Canada (Central)</td>
+<td>ca-central-1</td>
+</tr>
+<tr>
+<td>EU Central (Frankfurt)</td>
+<td>eu-central-1</td>
+</tr>
+<tr>
+<td>EU North (Stockholm)</td>
+<td>eu-north-1</td>
+</tr>
+<tr>
+<td>EU West (Ireland)</td>
+<td>eu-west-1</td>
+</tr>
+<tr>
+<td>EU West (London)</td>
+<td>eu-west-2</td>
+</tr>
+<tr>
+<td>EU West (Paris)</td>
+<td>eu-west-3</td>
+</tr>
+<tr>
+<td>South America (Sao Paulo)</td>
+<td>sa-east-1</td>
+</tr>
+<tr>
+<td>US East (Virginia)</td>
+<td>us-east-1</td>
+</tr>
+<tr>
+<td>{US East (Ohio)</td>
+<td>us-east-2</td>
+</tr>
+<tr>
+<td>US West (N. California)</td>
+<td>us-west-1</td>
+</tr>
+<tr>
+<td>US West (Oregon)</td>
+<td>us-west-2</td>
+</tr>
+<tr>
+<td>China (Beijing)</td>
+<td>cn-north-1</td>
+</tr>
+<tr>
+<td>China (Ningxia)</td>
+<td>cn-northwest-1</td>
+</tr>
+<tr>
+<td>US GovCloud East (Virginia)</td>
+<td>us-gov-east-1</td>
+</tr>
+<tr>
+<td>US GovCloud West (Oregon)</td>
+<td>us-gov-west-1</td>
+</tr>
+</tbody>
+</table>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Raspberry Pi 4!!!</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/raspberry-pi-4.html"/>
+        <id>https://8codebubble.com/raspberry-pi-4.html</id>
+        <media:content url="https://8codebubble.com/media/posts/9/OIP.jpg" medium="image" />
+            <category term="IOT Projects "/>
+            <category term="HomeLab"/>
+
+        <updated>2019-06-25T05:09:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/9/OIP.jpg" alt="" />
+                    The raspberry Pi foundation loves it surprises and just as they did with the Raspberry Pi 3 when they first announced it the Raspberry Pi 4 is available for purchase on the same day :). From the reviews I have read so far there is a trade&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/9/OIP.jpg" class="type:primaryImage" alt="" /></p>
+                <p>The raspberry Pi foundation loves it surprises and just as they did with the Raspberry Pi 3 when they first announced it the Raspberry Pi 4 is available for <strong>purchase</strong> on the same day :).</p>
+<p>From the reviews I have read so far there is a trade off of slightly more power consumption for at-least double the performance of the Pi 3. There is also massive I/O performance gains. See the new specs below.</p>
+<figure class="post__image"><img loading="lazy"  src="https://8codebubble.com/media/posts/9/pi4-labelled.gif" alt="" width="583" height="341"></figure>
+<table>
+<tbody>
+<tr>
+<td>
+<h3>Spec</h3>
+</td>
+<td>
+<h3>Description</h3>
+</td>
+</tr>
+<tr>
+<td>SOC</td>
+<td>Broadcom BCM2711B0 quad-core A72 (ARMv8-A) 64-bit @ 1.5GHz</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>Broadcom VideoCore VI</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>1GB, 2GB, or 4GB LPDDR4 SDRAM</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>Bluetooth 5.0, Bluetooth Low Energy (BLE)</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>40-pin GPIO header, populated</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>microSD</td>
+</tr>
+<tr>
+<td>Ports</td>
+<td>2 × micro-HDMI 2.0, 3.5 mm analogue audio-video jack, 2 × USB 2.0, 2 × USB 3.0, Gigabit Ethernet, Camera Serial Interface (CSI), Display Serial Interface (DSI)</td>
+</tr>
+<tr>
+<td>Dimentions</td>
+<td>88 mm × 58 mm × 19.5 mm, 46 g</td>
+</tr>
+</tbody>
+</table>
+<p>Here are some informative links</p>
+<p><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" target="_blank" rel="noopener noreferrer">Raspberry Pi 4</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Boot Drive full Ubuntu 16 (can’t sudo apt-get upgrade)</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/boot-drive-full-ubuntu-16-cant-sudo-apt-get-upgrade.html"/>
+        <id>https://8codebubble.com/boot-drive-full-ubuntu-16-cant-sudo-apt-get-upgrade.html</id>
+        <media:content url="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" medium="image" />
+            <category term="Linux"/>
+            <category term="HomeLab"/>
+
+        <updated>2018-06-24T05:14:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" alt="" />
+                    Received the following error after attempting the following command on my ubuntu 16 VM. “sudo apt-get update” VM.Building dependency tree Reading state information… Done You might want to run ‘apt-get -f install’ to correct these: The following packages have unmet dependencies: linux-image-extra-4.4.0-103-generic : Depends: linux-image-4.4.0-103-generic&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" class="type:primaryImage" alt="" /></p>
+                <p>Received the following error after attempting the following command on my ubuntu 16 VM.</p>
+<p><strong> “sudo apt-get update” </strong></p>
+<p class="msg msg--info">VM.Building dependency tree<br>Reading state information… Done<br>You might want to run ‘apt-get -f install’ to correct these:<br>The following packages have unmet dependencies:<br>linux-image-extra-4.4.0-103-generic : Depends: linux-image-4.4.0-103-generic but it is not going to be installed<br>linux-image-extra-4.4.0-104-generic : Depends: linux-image-4.4.0-104-generic but it is not going to be installed<br>linux-image-extra-4.4.0-108-generic : Depends: linux-image-4.4.0-108-generic but it is not going to be installed<br>linux-image-extra-4.4.0-109-generic : Depends: linux-image-4.4.0-109-generic but it is not going to be installed<br>linux-image-extra-4.4.0-112-generic : Depends: linux-image-4.4.0-112-generic but it is not going to be installed<br>linux-image-extra-4.4.0-116-generic : Depends: linux-image-4.4.0-116-generic but it is not going to be installed<br>linux-image-extra-4.4.0-119-generic : Depends: linux-image-4.4.0-119-generic but it is not going to be installed<br>linux-image-extra-4.4.0-128-generic : Depends: linux-image-4.4.0-128-generic but it is not going to be installed<br>linux-image-extra-4.4.0-75-generic : Depends: linux-image-4.4.0-75-generic but it is not going to be installed<br>linux-image-generic : Depends: linux-image-4.4.0-128-generic but it is not going to be installed<br>Recommends: thermald but it is not going to be installed<br>E: Unmet dependencies. Try ‘apt-get -f install’ with no packages (or specify a solution).</p>
+<p><strong>Basically the boot partition was full and the old unused kernels needed to be deleted safely to free up the required space for the update.</strong></p>
+<p><strong>The Solution I used.</strong> (references are linked at the end of the post.)</p>
+<p><strong>Step 1: </strong>Get your current boot kernel</p>
+<p><strong><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">uname -r</code></strong></p>
+<p><strong>Step 2:</strong>  list all installed kernels</p>
+<p><strong><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">dpkg -l | grep -G "linux.*image.*"</code></strong></p>
+<p><em>output</em></p>
+<figure class="alignnone wp-image-189"><a href="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png" data-lbwps-width="1569" data-lbwps-height="678" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-300x130.png"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png" sizes="(max-width: 612px) 100vw, 612px" srcset="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png 1569w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-300x130.png 300w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-768x332.png 768w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-1024x442.png 1024w" alt="" width="612" height="265" data-is-external-image="true"></figure></a></p>
+<p><strong>Step 3:</strong> Delete unused kernel to free up some space on the boot drive</p>
+<p><strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1"><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P</code> ****installed kernel name from prev command***** </code></strong></p>
+<p><em>Example:</em> <strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P linux-image-4.4.0-104-generic</code></strong></p>
+<p><strong>Step 4: </strong>Install missing packages</p>
+<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo apt-get install -f</code></p>
+<p><strong>Step 5:</strong> remove all kernels except the currently loaded one</p>
+<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo apt-get purge $(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")</code></p>
+<p><em>The above command </em>took<em> some time on my vm</em></p>
+<p><strong>Step 6:</strong> Optional but I would say do it just to make sure your system is up to date.</p>
+<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo update</code></p>
+<p>then</p>
+<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo upgrade</code></p>
+<p><strong>References </strong></p>
+<p><a href="https://askubuntu.com/questions/585736/cant-clean-a-full-boot-because-of-unmet-dependencies">https://askubuntu.com/questions/585736/cant-clean-a-full-boot-because-of-unmet-dependencies</a></p>
+<p><a href="https://ubuntuforums.org/showthread.php?t=2254523">https://ubuntuforums.org/showthread.php?t=2254523</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Freenas Corral 2 Weeks In…</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/freenas-corral-2-weeks-in.html"/>
+        <id>https://8codebubble.com/freenas-corral-2-weeks-in.html</id>
+        <media:content url="https://8codebubble.com/media/posts/11/freenas.jpg" medium="image" />
+            <category term="Interest"/>
+            <category term="HomeLab"/>
+            <category term="FreeBSD"/>
+
+        <updated>2017-03-28T05:29:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/11/freenas.jpg" alt="" />
+                    I have been using Freenas’s Latest version “Freenas Corral” for about 2 weeks now as an upgrade to my previous version of Freenas 9.3 and while I am loving the new interface the upgrade has had it share of issues. Even with these issues it&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/11/freenas.jpg" class="type:primaryImage" alt="" /></p>
+                <p>I have been using Freenas’s Latest version “Freenas Corral” for about 2 weeks now as an upgrade to my previous version of Freenas 9.3 and while I am loving the new interface the upgrade has had it share of issues. Even with these issues it is a very impressive update.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>
