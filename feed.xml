@@ -3,7 +3,7 @@
     <title>8CodeBubble</title>
     <link href="https://8codebubble.com/feed.xml" rel="self" />
     <link href="https://8codebubble.com" />
-    <updated>2024-06-04T05:30:46+09:00</updated>
+    <updated>2024-08-16T23:04:59+09:00</updated>
     <author>
         <name>ymcadmin</name>
     </author>
@@ -58,13 +58,18 @@
 <p>For a quick solution restored for backup, if your unable todo this and you have access to the node your 2nd option is also simple.</p>
 <p>SSH into the node and run fsck against the offending /dev/???? device.</p>
 <p>In my case I had to get the serial number of the block device from Truenas which I use as my block and nfs storage appliance/service.</p>
-<figure class="wp-block-image size-large"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image-1.png" data-lbwps-width="2296" data-lbwps-height="135" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-1-300x18.png"><figure class="wp-image-567"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/11/image-1-1024x60.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image-1-1024x60.png 1024w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-300x18.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-768x45.png 768w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-1536x90.png 1536w, https://8codebubble.com/wp-content/uploads/2023/11/image-1-2048x120.png 2048w" alt="" width="1024" height="60" data-is-external-image="true"></figure></a></figure>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/2/gallery/image-1.png" data-size="2296x135"><img loading="lazy" src="https://8codebubble.com/media/posts/2/gallery/image-1-thumbnail.png" alt="" width="768" height="45"></a></figure>
+</div></div>
 <p>Which I then match to the device from cockpit storage view</p>
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-full"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png" data-lbwps-width="943" data-lbwps-height="526" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-2-300x167.png"><figure class="wp-image-568"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png" sizes="(max-width: 943px) 100vw, 943px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image-2.png 943w, https://8codebubble.com/wp-content/uploads/2023/11/image-2-300x167.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-2-768x428.png 768w" alt="" width="943" height="526" data-id="568" data-is-external-image="true"></figure></a></figure>
-</figure>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/2/gallery/image-2.png" data-size="943x526"><img loading="lazy" src="https://8codebubble.com/media/posts/2/gallery/image-2-thumbnail.png" alt="" width="768" height="428"></a></figure>
+</div></div>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex"></figure>
 <p>Then simple run fsck command as seen below.</p>
-<figure class="wp-block-image size-full"><a href="https://8codebubble.com/wp-content/uploads/2023/11/image.png" data-lbwps-width="918" data-lbwps-height="528" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2023/11/image-300x173.png"><figure class="wp-image-566"><img  src="https://8codebubble.com/wp-content/uploads/2023/11/image.png" sizes="(max-width: 918px) 100vw, 918px" srcset="https://8codebubble.com/wp-content/uploads/2023/11/image.png 918w, https://8codebubble.com/wp-content/uploads/2023/11/image-300x173.png 300w, https://8codebubble.com/wp-content/uploads/2023/11/image-768x442.png 768w" alt="" width="918" height="528" loading="lazy" data-is-external-image="true"></figure></a></figure>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/2/gallery/image.png" data-size="918x528"><img loading="lazy" src="https://8codebubble.com/media/posts/2/gallery/image-thumbnail.png" alt="" width="768" height="442"></a></figure>
+</div></div>
 <p>Crisis averted!</p>
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
 <figure class="wp-block-image size-full"></figure>
@@ -121,7 +126,10 @@
             <![CDATA[
                     <p><img src="https://8codebubble.com/media/posts/4/it-security-services-obj.png" class="type:primaryImage" alt="" /></p>
                 <p>There are lots of useful services and application one can use in a HomeLab and here are some that I have found useful in my personal HomeLab. I use these to simulate environments and research technologies I’m interested in.</p>
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex"><figure class="post__image"><img loading="lazy"  src="https://8codebubble.com/media/posts/4/home-lab-layout.png" alt="" width="1761" height="1300" sizes="(max-width: 48em) 100vw, 768px" srcset="https://8codebubble.com/media/posts/4/responsive/home-lab-layout-xs.png 300w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-sm.png 480w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-md.png 768w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-lg.png 1024w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-xl.png 1360w ,https://8codebubble.com/media/posts/4/responsive/home-lab-layout-2xl.png 1600w"></figure></figure>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/4/gallery/home-lab-layout.png" data-size="1761x1300"><img loading="lazy" src="https://8codebubble.com/media/posts/4/gallery/home-lab-layout-thumbnail.png" alt="" width="768" height="567"></a></figure>
+</div></div>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex"></figure>
 <ul>
 <li><strong>PFsense:</strong> PFsense is a free and open source firewall and router that also features unified threat management, load balancing, multi WAN, and more. PFsense is based on the OpenBSD operating system and can run on any hardware or virtual machine. PFsense provides a web interface for easy configuration and management of your network security. Learn more about PFsense at <a is="cib-link" rel="noreferrer noopener" href="https://www.pfsense.org/" target="_blank">their website</a>.</li>
 <li><strong>TrueNas:</strong> TrueNas is a powerful and flexible storage solution that lets you store, share, and protect your data. TrueNas is built on the OpenZFS file system, which offers advanced features like snapshots, replication, encryption, and deduplication. TrueNas can be deployed as a single node or a multi-node cluster, and supports various protocols such as SMB, NFS, iSCSI, and S3. You can also extend the functionality of TrueNas with plugins, such as Plex Media Server, NextCloud, Zoneminder, and more. Find out more about TrueNas at <a is="cib-link" rel="noreferrer noopener" href="https://www.truenas.com/" target="_blank">their website</a>.</li>
@@ -158,10 +166,8 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://8codebubble.com/media/posts/5/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" class="type:primaryImage" alt="" /></p>
-                <div class="article-featured-image prose prose-yuki mx-auto"><figure class="h-full object-center object-cover alignwide wp-post-image"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg 1024w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-300x300.jpg 300w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-150x150.jpg 150w, https://8codebubble.com/wp-content/uploads/2023/09/A-cartoon-image-of-the-Raspberry-Pi-5-OIG-768x768.jpg 768w" alt="" width="1024" height="1024" data-is-external-image="true"></figure></div>
+                <div class="article-featured-image prose prose-yuki mx-auto"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">The Raspberry Pi 5 was announced yesterday (Sep 28th) and is the latest and most powerful model of the popular single-board computer.</span></div>
 <div class="yuki-article-content yuki-entry-content clearfix mx-auto prose prose-yuki">
-<p>The Raspberry Pi 5 was announced yesterday (Sep 28th) and is the latest and most powerful model of the popular single-board computer.</p>
-<figure class="wp-block-image size-full"><figure class="wp-image-553"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5.webp" sizes="(max-width: 800px) 100vw, 800px" srcset="https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5.webp 800w, https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5-300x140.webp 300w, https://8codebubble.com/wp-content/uploads/2023/10/raspberry-pi-5-768x359.webp 768w" alt="" width="800" height="374" data-is-external-image="true"></figure></figure>
 <figure class="wp-block-table">
 <table>
 <tbody>
@@ -486,7 +492,9 @@
 <p><strong>Step 2:</strong>  list all installed kernels</p>
 <p><strong><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">dpkg -l | grep -G "linux.*image.*"</code></strong></p>
 <p><em>output</em></p>
-<figure class="alignnone wp-image-189"><a href="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png" data-lbwps-width="1569" data-lbwps-height="678" data-lbwps-srcsmall="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-300x130.png"><img loading="lazy"  src="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png" sizes="(max-width: 612px) 100vw, 612px" srcset="https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images.png 1569w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-300x130.png 300w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-768x332.png 768w, https://8codebubble.com/wp-content/uploads/2018/06/list_installed_boot_images-1024x442.png 1024w" alt="" width="612" height="265" data-is-external-image="true"></figure></a></p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/10/gallery/list_installed_boot_images.png" data-size="1569x678"><img loading="lazy" src="https://8codebubble.com/media/posts/10/gallery/list_installed_boot_images-thumbnail.png" alt="" width="768" height="332"></a></figure>
+</div></div>
 <p><strong>Step 3:</strong> Delete unused kernel to free up some space on the boot drive</p>
 <p><strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1"><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P</code> ****installed kernel name from prev command***** </code></strong></p>
 <p><em>Example:</em> <strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P linux-image-4.4.0-104-generic</code></strong></p>
