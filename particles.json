@@ -3,7 +3,7 @@
   "autoPlay": true,  
   "background": {
     "color": {
-      "value": "#000000"
+      "value": "#b4b4b4"
     },
     "image": "",
     "position": "",
@@ -562,8 +562,8 @@
       "move": {
         "speed": 10,
         "outModes": {
-          "default": "none",
-          "right": "destroy"
+          "default": "out",
+          "right": "out"
         },
         "straight": true
       },

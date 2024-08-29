@@ -79,7 +79,7 @@
         "duration": 2,
         "mix": false,
         "opacity": 0.8,
-        "size": 40,
+        "size": 10,
         "divs": {
           "distance": 200,
           "duration": 0.4,
