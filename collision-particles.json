@@ -242,7 +242,7 @@
       },
       "decay": 0,
       "distance": {},
-      "direction": "none",
+      "direction": "right",
       "drift": 0,
       "enable": true,
       "gravity": {
@@ -273,7 +273,7 @@
         "acceleration": 0,
         "enable": false
       },
-      "straight": false,
+      "straight": true,
       "trail": {
         "enable": false,
         "length": 10,
