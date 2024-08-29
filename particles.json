@@ -298,9 +298,9 @@
         "right": "out",
         "top": "out"
       },
-      "random": false,
+      "random": true,
       "size": false,
-      "speed": 5,
+      "speed": 8,
       "spin": {
         "acceleration": 0,
         "enable": false
@@ -562,8 +562,8 @@
       "move": {
         "speed": 10,
         "outModes": {
-          "default": "out",
-          "right": "out"
+          "default": "destroy",
+          "right": "destroy"
         },
         "straight": true
       },
