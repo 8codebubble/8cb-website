@@ -1,0 +1,8 @@
+{
+  "preset": "stars",
+  "fullScreen": {
+    "enable": false,
+    "zIndex": -1
+  }
+
+}
