@@ -528,7 +528,7 @@
       "wait": false
     },
     "rate": {
-      "quantity": 1,
+      "quantity": 0,
       "delay": 7
     },
     "shape": {
@@ -546,7 +546,7 @@
       "width": 0
     },
     "particles": {
-      "shape": {
+      /*"shape": {
         "type": "images",
         "options": {
           "images": {
@@ -555,7 +555,7 @@
             "height": 634
           }
         }
-      },
+      },*/
       "size": {
         "value": 40
       },
