@@ -1,5 +1,6 @@
 {
-  "autoPlay": true,
+  
+  "autoPlay": true,  
   "background": {
     "color": {
       "value": "#000000"
@@ -24,7 +25,7 @@
   "defaultThemes": {},
   "delay": 0,
   "fullScreen": {
-    "enable": true,
+    "enable": false,
     "zIndex": -1
   },
   "detectRetina": true,
