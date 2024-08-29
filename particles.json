@@ -562,8 +562,8 @@
       "move": {
         "speed": 10,
         "outModes": {
-          "default": "destroy",
-          "right": "destroy"
+          "default": "out",
+          "right": "out"
         },
         "straight": true
       },
