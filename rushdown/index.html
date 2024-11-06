@@ -27,6 +27,13 @@
         border-radius: 5px;
     }
 </style>
+
+<button onclick="showPopup()" id="show-popup-btn">Show Pop-Up</button>
+<div id="popup" class="popup" style="display: none;">
+    <button onclick="closePopup()" id="close-btn" class="close-btn">Close</button>
+    <div id="popup-content">Loading content...</div>
+</div>
+
 <script>
     /*document.getElementById('show-popup-btn').onclick = function () {
         showPopup();
@@ -60,10 +67,4 @@
         }
     }
 </script>
-
-<button onclick="showPopup()" ="show-popup-btn">Show Pop-Up</button>
-<div id="popup" class="popup" style="display: none;">
-    <button onclick="closePopup()" id="close-btn" class="close-btn">Close</button>
-    <div id="popup-content">Loading content...</div>
-</div>
 
