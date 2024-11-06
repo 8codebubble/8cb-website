@@ -1,7 +1,3 @@
-<?php
-header('content-type: application/json; charset=utf-8');
-header("access-control-allow-origin: *");
-?>
 [{
 	"id": "1",
 	"question": "I will send to you a postcard. Or I will send you a postcard.",
