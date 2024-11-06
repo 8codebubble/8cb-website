@@ -28,12 +28,44 @@
     }
 </style>
 
-<button onclick="showPopup()" id="show-popup-btn">Show Pop-Up</button>
+<button id="show-popup-btn">Show Pop-Up</button>
 <div id="popup" class="popup" style="display: none;">
-    <button  onclick="closePopup()" id="close-btn" class="close-btn">Close</button>
+    <button  id="close-btn" class="close-btn">Close</button>
     <div id="popup-content">Loading content...</div>
 </div>
+
 <script>
+        alert("test");
+    document.getElementById('show-popup-btn').onclick = function () {
+        showPopup();
+    };
+    document.getElementById('close-btn').onclick = function () {
+        closePopup();
+    };    
+
+    function showPopup() {
+        document.getElementById('popup').style.display = 'flex';
+        loadPopupContent();
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+    async function loadPopupContent() {
+        const url = '/rushdown/rushdown.html'; //'https://example.com/popup-content.html'; // Replace with your external URL 
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const content = await response.text();
+                document.getElementById('popup-content').innerHTML = content;
+            } else {
+                document.getElementById('popup-content').innerHTML = 'Failed to load content.'; 
+            }
+        } catch (error) {
+            console.error('Error loading content:', error);
+            document.getElementById('popup-content').innerHTML = 'Error loading content.';
+        }
+    }
 
 </script>
 

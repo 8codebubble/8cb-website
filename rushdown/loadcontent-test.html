@@ -1,0 +1,28 @@
+<div id="load-content" style="width: 100%; height: 400px;">loading...</div>
+<p>
+<script>
+    async function loadRushdownContent() {
+		const url = '/rushdown/index.html'; // Replace with your external URL 
+		try {
+			const response = await fetch(url);
+			if (response.ok) {
+				const content = await response.text();
+				document.getElementById('load-content').innerHTML = content;
+    			//await import('/rushdown/popup-script.js');
+    			$.getScript( "/rushdown/popup-script.js", function( data, textStatus, jqxhr ) {
+                  console.log( data ); // Data returned
+                  console.log( textStatus ); // Success
+                  console.log( jqxhr.status ); // 200
+                  console.log( "Load was performed." );
+                });
+			} else {
+				document.getElementById('load-content').innerHTML = 'Failed to load content.';
+			}
+		} catch (error) {
+			console.error('Error loading content:', error);
+			document.getElementById('load-content').innerHTML = 'Error loading content.';
+		}
+    }
+    loadRushdownContent();
+	</script>
+</p>
