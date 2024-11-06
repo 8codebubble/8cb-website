@@ -4,11 +4,13 @@
         <title>RushDown</title>
     </head>
     <body bgcolor="black">
+    <div id="popup-overlay">
         <div class='main_con_inner'>
             <div class='main_con_inner'>
                 <script src="rushdown/rushdown.nocache.js"></script>
             </div>
         </div>
+    </div>
     </body>
 </html>
 
@@ -22,4 +24,18 @@
         width: 0 auto;
         height: auto;
     }
+
+
+    #popup-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 </style>
