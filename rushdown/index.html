@@ -28,20 +28,20 @@
     }
 </style>
 
-<button id="show-popup-btn">Show Pop-Up</button>
+<button id="show-popup-btn">Show Pop-Up</button> 
 <div id="popup" class="popup" style="display: none;">
     <button  id="close-btn" class="close-btn">Close</button>
     <div id="popup-content">Loading content...</div>
 </div>
 
 <script>
+    alert("test");
     document.getElementById('show-popup-btn').onclick = function () {
         showPopup();
     };
     document.getElementById('close-btn').onclick = function () {
         closePopup();
-    };
-    alert("test");
+    };    
 
     function showPopup() {
         document.getElementById('popup').style.display = 'flex';
@@ -59,7 +59,7 @@
                 const content = await response.text();
                 document.getElementById('popup-content').innerHTML = content;
             } else {
-                document.getElementById('popup-content').innerHTML = 'Failed to load content.';
+                document.getElementById('popup-content').innerHTML = 'Failed to load content.'; 
             }
         } catch (error) {
             console.error('Error loading content:', error);
