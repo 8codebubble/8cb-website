@@ -3,7 +3,7 @@
     <title>8CodeBubble</title>
     <link href="https://8codebubble.com/feed.xml" rel="self" />
     <link href="https://8codebubble.com" />
-    <updated>2024-11-07T03:53:07+09:00</updated>
+    <updated>2024-11-29T04:35:25+09:00</updated>
     <author>
         <name>ymcadmin</name>
     </author>
@@ -279,7 +279,7 @@
                     <p><img src="https://8codebubble.com/media/posts/8/Screenshot-2023-10-16-103326.png" class="type:primaryImage" alt="" /></p>
                 <h2>Description</h2>
 <p>A docker container to auto update “A records” (main domain name not subdomains) for a given domain on Amazon’s AWS Route53.</p>
-<p>DockerHub Link<br><a href="https://hub.docker.com/r/pyrocro/auto-update-route53">auto-update-route53</a></p>
+<p>DockerHub Link<br><a href="https://hub.docker.com/r/pyrocro/auto-update-route53" target="_blank" rel="noopener noreferrer">auto-update-route53</a></p>
 <p><strong>My use case:</strong><br>Self-hosted services behind non-static IP address AKA your normal internet home connection.<br>This updates the route53 A record with my dynamic IP address if it changes.</p>
 <h2>Environment variables:</h2>
 <ul>
