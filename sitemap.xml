@@ -179,7 +179,7 @@
 </url>
 <url>
 <loc>https://8codebubble.com/self-hosted/</loc>
-<lastmod>2024-11-30T19:48:55+09:00</lastmod>
+<lastmod>2024-11-30T19:59:36+09:00</lastmod>
 <image:image>
 <image:loc>https://8codebubble.com/media/posts/4/gallery/home-lab-layout.png</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -204,6 +204,10 @@
 <image:loc>https://8codebubble.com/media/posts/6/gallery/image-1-e1616109825122-1-thumbnail.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://8codebubble.com/up-time/</loc>
+<lastmod>2024-11-30T20:06:52+09:00</lastmod>
 </url>
 <url>
 <loc>https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3/</loc>
