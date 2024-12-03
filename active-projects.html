@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Repo Activity</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f6f8fa;
+      color: #24292e;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0366d6;
+    }
+    .summary, .activity {
+      background-color: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 8px 24px rgba(27, 31, 35, 0.12);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+    }
+    .summary h2, .activity h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #0366d6;
+    }
+    .summary p, .activity p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .chart-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>GitHub Repository Timeline and Activity</h1>
+  <div id="repo-summary" class="summary"></div>
+  <div id="activity"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const repoOwner = 'pyrocro';
+  const repoName = 'AutoUpdateRoute53';
+  const summaryDiv = document.getElementById('repo-summary');
+  const activityDiv = document.getElementById('activity');
+
+  const fetchRepoSummary = async () => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}`);
+      const repo = await response.json();
+
+      const summaryElement = document.createElement('div');
+      summaryElement.classList.add('summary');
+
+      const repoNameElement = document.createElement('h2');
+      repoNameElement.textContent = repo.full_name;
+      summaryElement.appendChild(repoNameElement);
+
+      const repoDescription = document.createElement('p');
+      repoDescription.textContent = `Description: ${repo.description}`;
+      summaryElement.appendChild(repoDescription);
+
+      const repoStars = document.createElement('p');
+      repoStars.textContent = `Stars: ${repo.stargazers_count}`;
+      summaryElement.appendChild(repoStars);
+
+      const repoForks = document.createElement('p');
+      repoForks.textContent = `Forks: ${repo.forks_count}`;
+      summaryElement.appendChild(repoForks);
+
+      const repoIssues = document.createElement('p');
+      repoIssues.textContent = `Open Issues: ${repo.open_issues_count}`;
+      summaryElement.appendChild(repoIssues);
+
+      const chartContainer = document.createElement('div');
+      chartContainer.classList.add('chart-container');
+      const canvas = document.createElement('canvas');
+      canvas.id = 'languages-chart';
+      canvas.width = 400;
+      canvas.height = 400;
+      chartContainer.appendChild(canvas);
+      summaryElement.appendChild(chartContainer);
+
+      summaryDiv.appendChild(summaryElement);
+      fetchLanguages();
+    } catch (error) {
+      console.error('Error fetching repository summary:', error);
+    }
+  };
+
+  const fetchLanguages = async () => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/languages`);
+      const languages = await response.json();
+      const labels = Object.keys(languages);
+      const data = Object.values(languages);
+      const languagesChartCtx = document.getElementById('languages-chart').getContext('2d');
+
+      new Chart(languagesChartCtx, {
+        type: 'pie',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: [
+              '#FF6384',
+              '#36A2EB',
+              '#FFCE56',
+              '#4BC0C0',
+              '#9966FF',
+              '#FF9F40'
+            ],
+          }],
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: 'Languages Used'
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Error fetching languages:', error);
+    }
+  };
+
+  const fetchActivity = async () => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/events`);
+      const events = await response.json();
+
+      events.forEach(event => {
+        const activityElement = document.createElement('div');
+        activityElement.classList.add('activity');
+        
+        const eventType = document.createElement('h3');
+        eventType.textContent = event.type;
+        activityElement.appendChild(eventType);
+
+        const eventDate = document.createElement('p');
+        eventDate.textContent = `Date: ${new Date(event.created_at).toLocaleString()}`;
+        activityElement.appendChild(eventDate);
+
+        if (event.payload && event.payload.commits) {
+          const commits = document.createElement('p');
+          commits.textContent = `Commits: ${event.payload.commits.length}`;
+          activityElement.appendChild(commits);
+        }
+
+        activityDiv.appendChild(activityElement);
+      });
+    } catch (error) {
+      console.error('Error fetching activity:', error);
+    }
+  };
+
+  fetchRepoSummary();
+  fetchActivity();
+});
+
+</script>
