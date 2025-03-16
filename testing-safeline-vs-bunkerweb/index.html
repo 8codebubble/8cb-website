@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WAF Testing: Safeline or BunkerWeb - 8CodeBubble</title><meta name="description" content="A Web Application Firewall (WAF) is a security solution designed to protect web applications by filtering and monitoring HTTP traffic between a web application and the internet. It acts as a shield, safeguarding applications from common vulnerabilities and attacks such as: SQL Injection: Prevents unauthorized&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="stylesheet" href="https://8codebubble.com/media/plugins/syntaxHighlighter/prism-black.css"><link rel="canonical" href="https://8codebubble.com/testing-safeline-vs-bunkerweb/"><link rel="alternate" type="application/atom+xml" href="https://8codebubble.com/feed.xml"><link rel="alternate" type="application/json" href="https://8codebubble.com/feed.json"><meta property="og:title" content="WAF Testing: Safeline or BunkerWeb"><meta property="og:image" content="https://8codebubble.com/media/posts/25/safeline_vs_bunkerweb.png"><meta property="og:image:width" content="1806"><meta property="og:image:height" content="1026"><meta property="og:site_name" content="8CodeBubble"><meta property="og:description" content="A Web Application Firewall (WAF) is a security solution designed to protect web applications by filtering and monitoring HTTP traffic between a web application and the internet. It acts as a shield, safeguarding applications from common vulnerabilities and attacks such as: SQL Injection: Prevents unauthorized&hellip;"><meta property="og:url" content="https://8codebubble.com//testing-safeline-vs-bunkerweb/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://8codebubble.com/media/website/cropped-small_8codebubble-logo.png" type="image/png"><link rel="stylesheet" href="https://8codebubble.com/assets/css/style.css?v=b87af69c45642edd7b36135eda1c9279"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://8codebubble.com/testing-safeline-vs-bunkerweb/"},"headline":"WAF Testing: Safeline or BunkerWeb","datePublished":"2024-12-12T03:40+09:00","dateModified":"2025-03-17T03:51+09:00","image":{"@type":"ImageObject","url":"https://8codebubble.com/media/posts/25/safeline_vs_bunkerweb.png","height":1026,"width":1806},"description":"A Web Application Firewall (WAF) is a security solution designed to protect web applications by filtering and monitoring HTTP traffic between a web application and the internet. It acts as a shield, safeguarding applications from common vulnerabilities and attacks such as: SQL Injection: Prevents unauthorized&hellip;","author":{"@type":"Person","name":"ymcadmin","url":"https://8codebubble.com/authors/yohance-mcdonald/"},"publisher":{"@type":"Organization","name":"ymcadmin","logo":{"@type":"ImageObject","url":"https://8codebubble.com/media/website/small_8codebubble-logo.png","height":48,"width":128}}}</script><style>.u-tag--containers{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--cpp{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--docker{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--freebsd{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--games{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--homelab{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--interest{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--iot-projects{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--kubernetes{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--linux{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--my-software{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--networking{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--quest3{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--tutorial{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--vr{--badge-bg:#84888E;--badge-txt:#FFFFFF;}</style><noscript><style>img[loading]{opacity:1;}</style></noscript><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script></head><body class="post-template"><header class="topbar" id="js-header"><div id="banner"></div><div class="topbar__inner"><a class="logo" href="https://8codebubble.com/"><img src="https://8codebubble.com/media/website/small_8codebubble-logo.png" alt="8CodeBubble" width="128" height="48"></a><nav class="navbar"><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://8codebubble.com/self-hosted/" target="_self">Self-Hosted Live Stats 📈</a></li><li><a href="https://8codebubble.com/webgl-test-2/" title="WEBGL Test" target="_self">WEBGL Test</a></li><li><a href="https://8codebubble.com/heureka-game/" target="_self">Heureka Game</a></li><li><a href="https://8codebubble.com/up-time/" target="_self">Up-Time</a></li></ul></nav></div></header><div class="main-content"><div class="infobar"><div class="infobar__update">Last Updated: <time datetime="2025-03-17T03:51">March 17, 2025</time></div><div class="infobar__search"></div></div><main class="main post"><article class="content"><figure class="content__featured-image"><img src="https://8codebubble.com/media/posts/25/safeline_vs_bunkerweb.png" srcset="https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-xs.png 300w, https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-sm.png 480w, https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-md.png 768w, https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-lg.png 1024w, https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-xl.png 1360w, https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-2xl.png 1600w" sizes="(max-width: 1600px) 100vw, 1600px" loading="eager" height="1026" width="1806" alt=""></figure><header class="u-header content__header"><h1>WAF Testing: Safeline or BunkerWeb</h1><div class="u-header__meta u-small"><div><a href="https://8codebubble.com/authors/yohance-mcdonald/" title="ymcadmin">ymcadmin</a> <time datetime="2024-12-12T03:40">December 12, 2024</time></div></div></header><div class="content__entry u-inner"><pre class="language-markdown line-numbers"><code>A Web Application Firewall (WAF) is a security solution designed to protect web applications by filtering and monitoring HTTP traffic between a web application and the internet. It acts as a shield, safeguarding applications from common vulnerabilities and attacks such as:
+
+SQL Injection: Prevents unauthorized access to databases.
+
+Cross-Site Scripting (XSS): Blocks malicious scripts from being executed in a user's browser.
+
+File Inclusion Attacks: Protects against unauthorized access to files on a server.</code></pre><p>I'm currently testing Safeline and BunkerWeb to see which best suits my current home lab services and security infostructure. Both feature reverse proxy options but I much prefer to keep my pfsense(Ha proxy) implementation which give me greater flexibility for internal and external traffic. I'm much prefer Opensource projects was such BunkerWeb is winning in this regard however Safeline has a has a much better interface with better navigation. </p><p>Here is a table comparing some of my initial findings.</p><table style="height: 640px; width: 102.991%;"><thead><tr><th style="width: 23.9658%;">Feature</th><th style="width: 40.0856%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-WStr9LAXevBfdkhikKx6BKooAc-shD9kCznZ5aXvSldUnK3bz9-g86SlLydvjWaJOlrEq3unbfKOWKoykG8oOgbB-noxXkp5U65whCu3jtwTWGJCNJ3QkgQpKNJ_12mnrMov8DQvjW7aISYE91_SxZsi4RRjdF_-yvT4sFqzKV66SYJTcKkYHaOLjgRt/s718/SafeLine_1_banner.png" data-is-external-image="true">SafeLine</th><th style="width: 35.806%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbPYaa6aOrqssFzH8KltmWvg_9Gd4aumu8y_rhOnDOkzWuaCnk9MzX2DTq_ch520g5ZCAiGNyowdSq9HyPjpsNXbMxeUGuDhyAv1La0pBzGDTiVF7Yt2m-KbTpQWwI7L2VFZTzqFwYmhKrDLp1wcuCxpfwAJ-65bLggEnpy9TNo013LM-afyfbkrQnuom6/s16000/BunkerWeb%20.webp" width="148" height="83" data-is-external-image="true">BunkerWeb</th></tr></thead><tbody><tr><td style="width: 23.9658%;">Ease of Deployment</td><td style="width: 40.0856%;">Quick setup via Docker</td><td style="width: 35.806%;">Seamless integration with various environments (Linux, Docker, Kubernetes)</td></tr><tr><td style="width: 23.9658%;">Customization</td><td style="width: 40.0856%;">Limited to predefined features</td><td style="width: 35.806%;">Highly customizable with plugins</td></tr><tr><td style="width: 23.9658%;">Anti-Bot Protection</td><td style="width: 40.0856%;">Yes</td><td style="width: 35.806%;">Yes</td></tr><tr><td style="width: 23.9658%;">DDoS Mitigation</td><td style="width: 40.0856%;">Rate limiting and waiting room</td><td style="width: 35.806%;">Yes</td></tr><tr><td style="width: 23.9658%;">User Interface</td><td style="width: 40.0856%;">Very Streamlined</td><td style="width: 35.806%;">Nice but a bit hard to navigate</td></tr><tr><td style="width: 23.9658%;">Licensing</td><td style="width: 40.0856%;">Free and paid versions available</td><td style="width: 35.806%;">Fully open-source (AGPLv3)</td></tr></tbody></table></div><aside class="content__aside"><div class="content__share"></div></aside><footer class="content__footer"><nav class="content__nav box"><div class="content__nav__prev"><a href="https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3/" class="content__nav__link" rel="prev"><img src="https://8codebubble.com/media/posts/1/responsive/oniri-xs.png" loading="lazy" alt="" height="1355" width="1567"><div class="u-small">Previous Post<h5>Viewing Tech demo of 3D Gaussian Splatting on Quest3.</h5></div></a></div></nav></footer></article></main><div class="sidebar"><section><h3>Desk Buddies Live View</h3><iframe style="width:100%;height:315px" src="https://www.youtube.com/embed/live_stream?channel=UCWtObC6ECQAjOP4x7fmtzYg&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section><section class="box"><h3 class="box__title">Tags</h3><ul class="tags"><li><a href="https://8codebubble.com/tags/containers/">Containers</a> <span class="u-small">(1)</span></li><li><a href="https://8codebubble.com/tags/cpp/">CPP</a> <span class="u-small">(3)</span></li><li><a href="https://8codebubble.com/tags/docker/">Docker</a> <span class="u-small">(1)</span></li><li><a href="https://8codebubble.com/tags/freebsd/">FreeBSD</a> <span class="u-small">(1)</span></li><li><a href="https://8codebubble.com/tags/games/">Games</a> <span class="u-small">(2)</span></li></ul></section></div><footer class="footer"><a class="footer__logo" href="https://8codebubble.com/"><img src="https://8codebubble.com/media/website/small_8codebubble-logo.png" alt="8CodeBubble" width="128" height="48"></a><nav><ul class="footer__nav"></ul></nav><div class="footer__copyright"><p>8codebubble</p></div></footer></div><script>window.publiiThemeMenuConfig = {    
+        mobileMenuMode: 'sidebar',
+        animationSpeed: 300,
+        submenuWidth: 'auto',
+        doubleClickTime: 500,
+        mobileMenuExpandableSubmenus: true, 
+        relatedContainerForOverlayMenuSelector: '.navbar',
+   };</script><script defer="defer" src="https://8codebubble.com/assets/js/scripts.min.js?v=18a65c58aef57c0287e0f0609f3389a9"></script><script>var images = document.querySelectorAll('img[loading]');
+
+      for (var i = 0; i < images.length; i++) {
+         if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+         } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+               }, false);
+         }
+      }</script><style>/*.mydiv {
+    position: relative;
+    background-color: #f0f0f0; /* Set your desired background color */
+    width: 200px;
+    height: 100px;
+    }
+
+    */ .mydiv::before {
+        /*content: "";*/
+        /*position: absolute;*/
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        transition: left 0.3s ease-in-out;
+    }
+
+    .mydiv:hover::before {
+        left: 100%;
+    }</style><style>.shine-effect:after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: -50%;
+        left: -150%;
+        width: 400%;
+        height: 200%;
+        opacity: 0;
+        transform: rotate(45deg);
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0.13) 0%,
+                rgba(255, 255, 255, 0.13) 47%,
+                rgba(255, 255, 255, 0.5) 62%,
+                rgba(255, 255, 255, 0.0) 100%);
+        transition-property: left, top, opacity;
+        transition-duration: 0s, 0s, 0s;
+        transition-timing-function: ease;
+    }
+
+    /* Hover state - trigger effect */
+    .shine-effect:hover:after {
+        opacity: .8;
+        top: -100%;
+        left: 100%;
+        transition-property: left, top, opacity;
+        transition-duration: 1.1s, 1.1s, .415s;
+        transition-timing-function: ease;
+    }
+
+    /* Active state */
+    .shine-effect:active:after {
+        opacity: 0;
+    }</style><style></style><script>var myDiv = document.getElementsByClassName('c-card__image');
+    for (var i = 0; i < myDiv.length; i++) {
+        myDiv[i].classList.add("shine-effect");
+        myDiv[i].addEventListener('mouseover', () => {
+            // Handle the mouseover event (you can add more logic here)
+            console.log('Mouse over!' + this.name);
+        });
+    }
+
+    /*var toolbardiv = document.querySelector('.topbar__inner');
+    console.log(toolbardiv);  
+    toolbardiv.setAttribute('id', 'toolbar');    */</script><style>#banner{
+    	position: absolute;
+    	width: 100vh;
+    	min-width: 100vw;
+    	max-width: 100vw;
+    	overflow: hidden;    
+    	left: 0;
+    	z-index: -1;
+    	height:100%;
+    
+    }
+    canvas {
+       
+    }</style><script>$(document).ready(async function () {
+        await loadFull(tsParticles);       
+
+        $("#banner")
+            .particles()
+            .ajax("https://8codebubble.com/particles.json", function (container) {
+                // container is the particles container where you can play/pause or stop/start.
+                // the container is already started, you don't need to start it manually.
+            });
+    });</script><script defer="defer" src="https://8codebubble.com/media/plugins/syntaxHighlighter/prism.js"></script><script defer="defer" src="https://8codebubble.com/media/plugins/syntaxHighlighter/prism-line-numbers.min.js"></script></body></html>
