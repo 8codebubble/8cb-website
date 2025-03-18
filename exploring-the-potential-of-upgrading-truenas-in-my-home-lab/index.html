@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Exploring the Potential of Upgrading TrueNAS in My Home Lab - 8CodeBubble</title><meta name="description" content="For my latest home lab project, I decided to supercharge my TrueNAS setup by integrating Monster Storage SSDs (4TB NVMe PCIe Gen4 x4) and an M.2 PCIe Adapter (ph44). This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="stylesheet" href="https://8codebubble.com/media/plugins/syntaxHighlighter/prism-black.css"><link rel="canonical" href="https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/"><link rel="alternate" type="application/atom+xml" href="https://8codebubble.com/feed.xml"><link rel="alternate" type="application/json" href="https://8codebubble.com/feed.json"><meta property="og:title" content="Exploring the Potential of Upgrading TrueNAS in My Home Lab"><meta property="og:image" content="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg"><meta property="og:image:width" content="4080"><meta property="og:image:height" content="3072"><meta property="og:site_name" content="8CodeBubble"><meta property="og:description" content="For my latest home lab project, I decided to supercharge my TrueNAS setup by integrating Monster Storage SSDs (4TB NVMe PCIe Gen4 x4) and an M.2 PCIe Adapter (ph44). This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand&hellip;"><meta property="og:url" content="https://8codebubble.com//exploring-the-potential-of-upgrading-truenas-in-my-home-lab/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://8codebubble.com/media/website/cropped-small_8codebubble-logo.png" type="image/png"><link rel="stylesheet" href="https://8codebubble.com/assets/css/style.css?v=b87af69c45642edd7b36135eda1c9279"><link rel="stylesheet" href="https://8codebubble.com/assets/css/photoswipe.css?v=366561c4c503c68e3af3389ac4d7fb8e"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/"},"headline":"Exploring the Potential of Upgrading TrueNAS in My Home Lab","datePublished":"2024-04-09T02:52+09:00","dateModified":"2025-03-19T02:57+09:00","image":{"@type":"ImageObject","url":"https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg","height":3072,"width":4080},"description":"For my latest home lab project, I decided to supercharge my TrueNAS setup by integrating Monster Storage SSDs (4TB NVMe PCIe Gen4 x4) and an M.2 PCIe Adapter (ph44). This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand&hellip;","author":{"@type":"Person","name":"ymcadmin","url":"https://8codebubble.com/authors/yohance-mcdonald/"},"publisher":{"@type":"Organization","name":"ymcadmin","logo":{"@type":"ImageObject","url":"https://8codebubble.com/media/website/small_8codebubble-logo.png","height":48,"width":128}}}</script><style>.u-tag--containers{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--cpp{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--docker{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--freebsd{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--games{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--homelab{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--interest{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--iot-projects{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--kubernetes{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--linux{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--my-software{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--networking{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--quest3{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--security{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--tutorial{--badge-bg:#84888E;--badge-txt:#FFFFFF;}.u-tag--vr{--badge-bg:#84888E;--badge-txt:#FFFFFF;}</style><noscript><style>img[loading]{opacity:1;}</style></noscript><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script></head><body class="post-template"><header class="topbar" id="js-header"><div id="banner"></div><div class="topbar__inner"><a class="logo" href="https://8codebubble.com/"><img src="https://8codebubble.com/media/website/small_8codebubble-logo.png" alt="8CodeBubble" width="128" height="48"></a><nav class="navbar"><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://8codebubble.com/self-hosted/" target="_self">Self-Hosted Live Stats 📈</a></li><li><a href="https://8codebubble.com/webgl-test-2/" title="WEBGL Test" target="_self">WEBGL Test</a></li><li><a href="https://8codebubble.com/heureka-game/" target="_self">Heureka Game</a></li><li><a href="https://8codebubble.com/up-time/" target="_self">Up-Time</a></li></ul></nav></div></header><div class="main-content"><div class="infobar"><div class="infobar__update">Last Updated: <time datetime="2025-03-19T02:57">March 19, 2025</time></div><div class="infobar__search"></div></div><main class="main post"><article class="content"><figure class="content__featured-image"><img src="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" srcset="https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-xs.jpg 300w, https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-sm.jpg 480w, https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-md.jpg 768w, https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-lg.jpg 1024w, https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-xl.jpg 1360w, https://8codebubble.com/media/posts/26/responsive/PXL_20240409_115207098-2xl.jpg 1600w" sizes="(max-width: 1600px) 100vw, 1600px" loading="eager" height="3072" width="4080" alt=""></figure><header class="u-header content__header"><h1>Exploring the Potential of Upgrading TrueNAS in My Home Lab</h1><div class="u-header__meta u-small"><div><a href="https://8codebubble.com/authors/yohance-mcdonald/" title="ymcadmin">ymcadmin</a> <time datetime="2024-04-09T02:52">April 9, 2024</time></div></div></header><div class="content__entry u-inner"><div class="gallery-wrapper"><div class="gallery" data-is-empty="false" data-translation="Add images" data-columns="3"><figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115217087.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115217087-thumbnail.jpg" alt="" width="768" height="578"></a></figure><figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115207098.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115207098-thumbnail.jpg" alt="" width="768" height="578"></a></figure><figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115111344.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115111344-thumbnail.jpg" alt="" width="768" height="578"></a></figure></div></div><p>For my latest home lab project, I decided to supercharge my <strong>TrueNAS</strong> setup by integrating <strong>Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)</strong> and an <strong>M.2 PCIe Adapter (ph44)</strong>. This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand workloads like virtualization and media streaming.</p><div class="gallery-wrapper"><div class="gallery" data-is-empty="false" data-translation="Add images" data-columns="3"><figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/Monster-Storage-SSD-4TB-NVMe-PCIe-Gen4-x-4.jpg" data-size="1500x1500"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/Monster-Storage-SSD-4TB-NVMe-PCIe-Gen4-x-4-thumbnail.jpg" alt="Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)" width="768" height="768"></a><figcaption>Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)</figcaption></figure><figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/M.2-PCIE-Adapter-Adapter-Card-4-Ports-M.2-NVMeSSD-to-PCIEX16M.jpg" data-size="1307x1431"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/M.2-PCIE-Adapter-Adapter-Card-4-Ports-M.2-NVMeSSD-to-PCIEX16M-thumbnail.jpg" alt="M.2 PCIe Adapter (ph44)" width="768" height="841"></a><figcaption>M.2 PCIe Adapter (ph44)</figcaption></figure></div></div><h3><strong>Hardware Overview</strong></h3><p>The core components of the upgrade:</p><div><div><table><thead><tr><th><strong>Component</strong></th><th><strong>Specifications</strong></th></tr></thead><tbody><tr><td><strong>Monster Storage SSD 4TB NVMe</strong></td><td><p>- <strong>Interface</strong>: PCIe Gen4 x4</p><p>- <strong>Max Read</strong>: 7,100 MB/s</p><p>- <strong>Max Write</strong>: 6,100 MB/s</p><p>- <strong>Type</strong>: M.2 2280</p><p>- <strong>Technology</strong>: 3D NAND</p><p>- <strong>Heatsink Included</strong>: Yes</p></td></tr><tr><td><strong>M.2 PCIe Adapter (ph44)</strong></td><td><p>- <strong>Slots</strong>: 4 M.2 NVMe SSDs</p><p>- <strong>Interface</strong>: PCIe x16</p><p>- <strong>Compatibility</strong>: PCIe Gen3/Gen4</p><p>- <strong>Power Delivery</strong>: Stable via onboard controller</p><p>- <strong>LED Indicators</strong>: Per-slot status monitoring</p></td></tr></tbody></table></div><div> </div></div><p>This combination offers an impressive blend of speed, capacity, and scalability, making it a perfect fit for demanding environments like TrueNAS.</p><h3><strong>Reflection on Cloud Storage Utility</strong></h3><p>This project wasn’t just about speed—it’s also about ensuring the system is future-proofed for emerging technologies. Here’s what the upgrade accomplished:</p><ul><li><p><strong>Capacity</strong>: Added 16TB of high-speed storage.</p></li><li><p><strong>Redundancy</strong>: RAID-Z safeguards against drive failures.</p></li><li><p><strong>Use Cases</strong>: Ideal for virtual machine hosting, 4K media transcoding, and efficient cloud backups.</p></li></ul><p> </p></div><aside class="content__aside"><div class="content__share"></div></aside><footer class="content__footer"><nav class="content__nav box"><div class="content__nav__prev"><a href="https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3/" class="content__nav__link" rel="prev"><img src="https://8codebubble.com/media/posts/1/responsive/oniri-xs.png" loading="lazy" alt="" height="1355" width="1567"><div class="u-small">Previous Post<h5>Viewing Tech demo of 3D Gaussian Splatting on Quest3.</h5></div></a></div><div class="content__nav__next"><a href="https://8codebubble.com/testing-safeline-vs-bunkerweb/" class="content__nav__link" rel="next"><div class="u-small">Next Post<h5>WAF Testing: Safeline or BunkerWeb</h5></div><img src="https://8codebubble.com/media/posts/25/responsive/safeline_vs_bunkerweb-xs.png" loading="lazy" alt="" height="1026" width="1806"></a></div></nav><div class="content__related box"><h3 class="box__title">Related posts</h3><div class="content__related-wrap"><figure class="content__related-item"><a href="https://8codebubble.com/here-is-a-quick-overview-of-services-in-my-homelab/" class="c-card__image"><img src="https://8codebubble.com/media/posts/4/responsive/it-security-services-obj-xs.png" loading="lazy" height="707" width="743" alt=""></a><figcaption><h4 class="content__related-title"><a href="https://8codebubble.com/here-is-a-quick-overview-of-services-in-my-homelab/" class="inverse">Here is a quick overview of services in my HomeLab :)</a></h4><time datetime="2023-10-22T04:10" class="u-small">October 22, 2023</time></figcaption></figure></div></div></footer></article></main><div class="sidebar"><section><h3>Server Top Live View</h3><iframe style="width:100%;height:315px" src="https://jet-stream.8codebubble.com/usbcam0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section><section class="box"><h3 class="box__title">Tags</h3><ul class="tags"><li><a href="https://8codebubble.com/tags/containers/">Containers</a> <span class="u-small">(2)</span></li><li><a href="https://8codebubble.com/tags/cpp/">CPP</a> <span class="u-small">(3)</span></li><li><a href="https://8codebubble.com/tags/docker/">Docker</a> <span class="u-small">(2)</span></li><li><a href="https://8codebubble.com/tags/freebsd/">FreeBSD</a> <span class="u-small">(1)</span></li><li><a href="https://8codebubble.com/tags/games/">Games</a> <span class="u-small">(2)</span></li></ul></section></div><footer class="footer"><a class="footer__logo" href="https://8codebubble.com/"><img src="https://8codebubble.com/media/website/small_8codebubble-logo.png" alt="8CodeBubble" width="128" height="48"></a><nav><ul class="footer__nav"></ul></nav><div class="footer__copyright"><p>8codebubble</p></div></footer></div><script>window.publiiThemeMenuConfig = {    
+        mobileMenuMode: 'sidebar',
+        animationSpeed: 300,
+        submenuWidth: 'auto',
+        doubleClickTime: 500,
+        mobileMenuExpandableSubmenus: true, 
+        relatedContainerForOverlayMenuSelector: '.navbar',
+   };</script><script defer="defer" src="https://8codebubble.com/assets/js/scripts.min.js?v=18a65c58aef57c0287e0f0609f3389a9"></script><script>var images = document.querySelectorAll('img[loading]');
+
+      for (var i = 0; i < images.length; i++) {
+         if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+         } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+               }, false);
+         }
+      }</script><script defer="defer" src="https://8codebubble.com/assets/js/photoswipe.min.js?v=017385b552f7e0d979e2e2fe6f324015"></script><script defer="defer" src="https://8codebubble.com/assets/js/photoswipe-ui-default.min.js?v=d067f0883540b1ddda0e2c9ad1b14260"></script><script>var initPhotoSwipeFromDOM=function(gallerySelector){var parseThumbnailElements=function(el){var thumbElements=el.childNodes,numNodes=thumbElements.length,items=[],figureEl,linkEl,size,item;for(var i=0;i<numNodes;i++){figureEl=thumbElements[i];if(figureEl.nodeType!==1){continue;}
+   linkEl=figureEl.children[0];size=linkEl.getAttribute('data-size').split('x');item={src:linkEl.getAttribute('href'),w:parseInt(size[0],10),h:parseInt(size[1],10)};if(figureEl.children.length>1){item.title=figureEl.children[1].innerHTML;}
+   if(linkEl.children.length>0){item.msrc=linkEl.children[0].getAttribute('src');}
+   item.el=figureEl;items.push(item);}
+   return items;};var closest=function closest(el,fn){return el&&(fn(el)?el:closest(el.parentNode,fn));};var onThumbnailsClick=function(e){e=e||window.event;e.preventDefault?e.preventDefault():e.returnValue=false;var eTarget=e.target||e.srcElement;var clickedListItem=closest(eTarget,function(el){return(el.tagName&&el.tagName.toUpperCase()==='FIGURE');});if(!clickedListItem){return;}
+   var clickedGallery=clickedListItem.parentNode,childNodes=clickedListItem.parentNode.childNodes,numChildNodes=childNodes.length,nodeIndex=0,index;for(var i=0;i<numChildNodes;i++){if(childNodes[i].nodeType!==1){continue;}
+   if(childNodes[i]===clickedListItem){index=nodeIndex;break;}
+   nodeIndex++;}
+   if(index>=0){openPhotoSwipe(index,clickedGallery);}
+   return false;};var photoswipeParseHash=function(){var hash=window.location.hash.substring(1),params={};if(hash.length<5){return params;}
+   var vars=hash.split('&');for(var i=0;i<vars.length;i++){if(!vars[i]){continue;}
+   var pair=vars[i].split('=');if(pair.length<2){continue;}
+   params[pair[0]]=pair[1];}
+   if(params.gid){params.gid=parseInt(params.gid,10);}
+   return params;};var openPhotoSwipe=function(index,galleryElement,disableAnimation,fromURL){var pswpElement=document.querySelectorAll('.pswp')[0],gallery,options,items;items=parseThumbnailElements(galleryElement);options={galleryUID:galleryElement.getAttribute('data-pswp-uid'),getThumbBoundsFn:function(index){var thumbnail=items[index].el.getElementsByTagName('img')[0],pageYScroll=window.pageYOffset||document.documentElement.scrollTop,rect=thumbnail.getBoundingClientRect();return{x:rect.left,y:rect.top+pageYScroll,w:rect.width};},
+   mainClass:'pswp--dark',
+   preload: [1,2],
+   hideAnimationDuration:200,
+   showAnimationDuration:0,
+   bgOpacity: 0.7,
+   showHideOpacity:true,
+   closeOnScroll: true,
+   arrowKeys: true,
+   closeEl: true,
+   captionEl: true,
+   fullscreenEl: true,
+   zoomEl: true,
+   shareEl: true,
+   counterEl: true,
+   arrowEl: true,
+   preloaderEl: true
+   };if(fromURL){if(options.galleryPIDs){for(var j=0;j<items.length;j++){if(items[j].pid==index){options.index=j;break;}}}else{options.index=parseInt(index,10)-1;}}else{options.index=parseInt(index,10);}
+   if(isNaN(options.index)){return;}
+   if(disableAnimation){options.showAnimationDuration=0;}
+   gallery=new PhotoSwipe(pswpElement,PhotoSwipeUI_Default,items,options);gallery.init();gallery.options.escKey=true;};var galleryElements=document.querySelectorAll(gallerySelector);for(var i=0,l=galleryElements.length;i<l;i++){galleryElements[i].setAttribute('data-pswp-uid',i+1);galleryElements[i].onclick=onThumbnailsClick;}
+   var hashData=photoswipeParseHash();if(hashData.pid&&hashData.gid){openPhotoSwipe(hashData.pid,galleryElements[hashData.gid-1],true,true);}};window.addEventListener('load', function () {initPhotoSwipeFromDOM('.gallery');}, false);</script><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button><button class="pswp__button pswp__button--share" title="Share"></button><button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button><button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button><button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><style>/*.mydiv {
+    position: relative;
+    background-color: #f0f0f0; /* Set your desired background color */
+    width: 200px;
+    height: 100px;
+    }
+
+    */ .mydiv::before {
+        /*content: "";*/
+        /*position: absolute;*/
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        transition: left 0.3s ease-in-out;
+    }
+
+    .mydiv:hover::before {
+        left: 100%;
+    }</style><style>.shine-effect:after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: -50%;
+        left: -150%;
+        width: 400%;
+        height: 200%;
+        opacity: 0;
+        transform: rotate(45deg);
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0.13) 0%,
+                rgba(255, 255, 255, 0.13) 47%,
+                rgba(255, 255, 255, 0.5) 62%,
+                rgba(255, 255, 255, 0.0) 100%);
+        transition-property: left, top, opacity;
+        transition-duration: 0s, 0s, 0s;
+        transition-timing-function: ease;
+    }
+
+    /* Hover state - trigger effect */
+    .shine-effect:hover:after {
+        opacity: .8;
+        top: -100%;
+        left: 100%;
+        transition-property: left, top, opacity;
+        transition-duration: 1.1s, 1.1s, .415s;
+        transition-timing-function: ease;
+    }
+
+    /* Active state */
+    .shine-effect:active:after {
+        opacity: 0;
+    }</style><style></style><script>var myDiv = document.getElementsByClassName('c-card__image');
+    for (var i = 0; i < myDiv.length; i++) {
+        myDiv[i].classList.add("shine-effect");
+        myDiv[i].addEventListener('mouseover', () => {
+            // Handle the mouseover event (you can add more logic here)
+            console.log('Mouse over!' + this.name);
+        });
+    }
+
+    /*var toolbardiv = document.querySelector('.topbar__inner');
+    console.log(toolbardiv);  
+    toolbardiv.setAttribute('id', 'toolbar');    */</script><style>#banner{
+    	position: absolute;
+    	width: 100vh;
+    	min-width: 100vw;
+    	max-width: 100vw;
+    	overflow: hidden;    
+    	left: 0;
+    	z-index: -1;
+    	height:100%;
+    
+    }
+    canvas {
+       
+    }</style><script>$(document).ready(async function () {
+        await loadFull(tsParticles);       
+
+        $("#banner")
+            .particles()
+            .ajax("https://8codebubble.com/particles.json", function (container) {
+                // container is the particles container where you can play/pause or stop/start.
+                // the container is already started, you don't need to start it manually.
+            });
+    });</script><script defer="defer" src="https://8codebubble.com/media/plugins/syntaxHighlighter/prism.js"></script><script defer="defer" src="https://8codebubble.com/media/plugins/syntaxHighlighter/prism-line-numbers.min.js"></script></body></html>

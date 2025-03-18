@@ -3,7 +3,7 @@
     <title>8CodeBubble</title>
     <link href="https://8codebubble.com/feed.xml" rel="self" />
     <link href="https://8codebubble.com" />
-    <updated>2025-03-17T16:35:01+09:00</updated>
+    <updated>2025-03-19T02:57:20+09:00</updated>
     <author>
         <name>ymcadmin</name>
     </author>
@@ -82,6 +82,95 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
 </tr>
 </tbody>
 </table>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Exploring the Potential of Upgrading TrueNAS in My Home Lab</title>
+        <author>
+            <name>ymcadmin</name>
+        </author>
+        <link href="https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/"/>
+        <id>https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/</id>
+        <media:content url="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" medium="image" />
+
+        <updated>2024-04-09T02:52:00+09:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" alt="" />
+                    For my latest home lab project, I decided to supercharge my TrueNAS setup by integrating Monster Storage SSDs (4TB NVMe PCIe Gen4 x4) and an M.2 PCIe Adapter (ph44). This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" class="type:primaryImage" alt="" /></p>
+                <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115217087.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115217087-thumbnail.jpg" alt="" width="768" height="578"></a></figure>
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115207098.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115207098-thumbnail.jpg" alt="" width="768" height="578"></a></figure>
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115111344.jpg" data-size="4080x3072"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/PXL_20240409_115111344-thumbnail.jpg" alt="" width="768" height="578"></a></figure>
+</div></div>
+<p>For my latest home lab project, I decided to supercharge my <strong>TrueNAS</strong> setup by integrating <strong>Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)</strong> and an <strong>M.2 PCIe Adapter (ph44)</strong>. This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand workloads like virtualization and media streaming.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/Monster-Storage-SSD-4TB-NVMe-PCIe-Gen4-x-4.jpg" data-size="1500x1500"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/Monster-Storage-SSD-4TB-NVMe-PCIe-Gen4-x-4-thumbnail.jpg" alt="Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)" width="768" height="768"></a>
+<figcaption>Monster Storage SSDs (4TB NVMe PCIe Gen4 x4)</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/26/gallery/M.2-PCIE-Adapter-Adapter-Card-4-Ports-M.2-NVMeSSD-to-PCIEX16M.jpg" data-size="1307x1431"><img loading="lazy" src="https://8codebubble.com/media/posts/26/gallery/M.2-PCIE-Adapter-Adapter-Card-4-Ports-M.2-NVMeSSD-to-PCIEX16M-thumbnail.jpg" alt="M.2 PCIe Adapter (ph44)" width="768" height="841"></a>
+<figcaption>M.2 PCIe Adapter (ph44)</figcaption>
+</figure>
+</div></div>
+<h3><strong>Hardware Overview</strong></h3>
+<p>The core components of the upgrade:</p>
+<div>
+<div>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Specifications</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monster Storage SSD 4TB NVMe</strong></td>
+<td>
+<p>- <strong>Interface</strong>: PCIe Gen4 x4</p>
+<p>- <strong>Max Read</strong>: 7,100 MB/s</p>
+<p>- <strong>Max Write</strong>: 6,100 MB/s</p>
+<p>- <strong>Type</strong>: M.2 2280</p>
+<p>- <strong>Technology</strong>: 3D NAND</p>
+<p>- <strong>Heatsink Included</strong>: Yes</p>
+</td>
+</tr>
+<tr>
+<td><strong>M.2 PCIe Adapter (ph44)</strong></td>
+<td>
+<p>- <strong>Slots</strong>: 4 M.2 NVMe SSDs</p>
+<p>- <strong>Interface</strong>: PCIe x16</p>
+<p>- <strong>Compatibility</strong>: PCIe Gen3/Gen4</p>
+<p>- <strong>Power Delivery</strong>: Stable via onboard controller</p>
+<p>- <strong>LED Indicators</strong>: Per-slot status monitoring</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div> </div>
+</div>
+<p>This combination offers an impressive blend of speed, capacity, and scalability, making it a perfect fit for demanding environments like TrueNAS.</p>
+<h3><strong>Reflection on Cloud Storage Utility</strong></h3>
+<p>This project wasn’t just about speed—it’s also about ensuring the system is future-proofed for emerging technologies. Here’s what the upgrade accomplished:</p>
+<ul>
+<li>
+<p><strong>Capacity</strong>: Added 16TB of high-speed storage.</p>
+</li>
+<li>
+<p><strong>Redundancy</strong>: RAID-Z safeguards against drive failures.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Ideal for virtual machine hosting, 4K media transcoding, and efficient cloud backups.</p>
+</li>
+</ul>
+<p> </p>
             ]]>
         </content>
     </entry>
@@ -534,58 +623,6 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
 </table>
 <p>Here are some informative links</p>
 <p><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" target="_blank" rel="noopener noreferrer">Raspberry Pi 4</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Boot Drive full Ubuntu 16 (can’t sudo apt-get upgrade)</title>
-        <author>
-            <name>ymcadmin</name>
-        </author>
-        <link href="https://8codebubble.com/boot-drive-full-ubuntu-16-cant-sudo-apt-get-upgrade/"/>
-        <id>https://8codebubble.com/boot-drive-full-ubuntu-16-cant-sudo-apt-get-upgrade/</id>
-        <media:content url="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" medium="image" />
-            <category term="Linux"/>
-            <category term="HomeLab"/>
-
-        <updated>2018-06-24T05:14:00+09:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" alt="" />
-                    Received the following error after attempting the following command on my ubuntu 16 VM. “sudo apt-get update” VM.Building dependency tree Reading state information… Done You might want to run ‘apt-get -f install’ to correct these: The following packages have unmet dependencies: linux-image-extra-4.4.0-103-generic : Depends: linux-image-4.4.0-103-generic&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://8codebubble.com/media/posts/10/list_installed_boot_images.png" class="type:primaryImage" alt="" /></p>
-                <p>Received the following error after attempting the following command on my ubuntu 16 VM.</p>
-<p><strong> “sudo apt-get update” </strong></p>
-<p class="msg msg--info">VM.Building dependency tree<br>Reading state information… Done<br>You might want to run ‘apt-get -f install’ to correct these:<br>The following packages have unmet dependencies:<br>linux-image-extra-4.4.0-103-generic : Depends: linux-image-4.4.0-103-generic but it is not going to be installed<br>linux-image-extra-4.4.0-104-generic : Depends: linux-image-4.4.0-104-generic but it is not going to be installed<br>linux-image-extra-4.4.0-108-generic : Depends: linux-image-4.4.0-108-generic but it is not going to be installed<br>linux-image-extra-4.4.0-109-generic : Depends: linux-image-4.4.0-109-generic but it is not going to be installed<br>linux-image-extra-4.4.0-112-generic : Depends: linux-image-4.4.0-112-generic but it is not going to be installed<br>linux-image-extra-4.4.0-116-generic : Depends: linux-image-4.4.0-116-generic but it is not going to be installed<br>linux-image-extra-4.4.0-119-generic : Depends: linux-image-4.4.0-119-generic but it is not going to be installed<br>linux-image-extra-4.4.0-128-generic : Depends: linux-image-4.4.0-128-generic but it is not going to be installed<br>linux-image-extra-4.4.0-75-generic : Depends: linux-image-4.4.0-75-generic but it is not going to be installed<br>linux-image-generic : Depends: linux-image-4.4.0-128-generic but it is not going to be installed<br>Recommends: thermald but it is not going to be installed<br>E: Unmet dependencies. Try ‘apt-get -f install’ with no packages (or specify a solution).</p>
-<p><strong>Basically the boot partition was full and the old unused kernels needed to be deleted safely to free up the required space for the update.</strong></p>
-<p><strong>The Solution I used.</strong> (references are linked at the end of the post.)</p>
-<p><strong>Step 1: </strong>Get your current boot kernel</p>
-<p><strong><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">uname -r</code></strong></p>
-<p><strong>Step 2:</strong>  list all installed kernels</p>
-<p><strong><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">dpkg -l | grep -G "linux.*image.*"</code></strong></p>
-<p><em>output</em></p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://8codebubble.com/media/posts/10/gallery/list_installed_boot_images.png" data-size="1569x678"><img loading="lazy" src="https://8codebubble.com/media/posts/10/gallery/list_installed_boot_images-thumbnail.png" alt="" width="768" height="332"></a></figure>
-</div></div>
-<p><strong>Step 3:</strong> Delete unused kernel to free up some space on the boot drive</p>
-<p><strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1"><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P</code> ****installed kernel name from prev command***** </code></strong></p>
-<p><em>Example:</em> <strong><code class="prettyprint" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo dpkg --force-all -P linux-image-4.4.0-104-generic</code></strong></p>
-<p><strong>Step 4: </strong>Install missing packages</p>
-<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo apt-get install -f</code></p>
-<p><strong>Step 5:</strong> remove all kernels except the currently loaded one</p>
-<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo apt-get purge $(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")</code></p>
-<p><em>The above command </em>took<em> some time on my vm</em></p>
-<p><strong>Step 6:</strong> Optional but I would say do it just to make sure your system is up to date.</p>
-<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo update</code></p>
-<p>then</p>
-<p><code class="prettyprint lang-sh" data-caption="" data-highlight="" data-visibility="visible" data-start-line="1">sudo upgrade</code></p>
-<p><strong>References </strong></p>
-<p><a href="https://askubuntu.com/questions/585736/cant-clean-a-full-boot-because-of-unmet-dependencies">https://askubuntu.com/questions/585736/cant-clean-a-full-boot-because-of-unmet-dependencies</a></p>
-<p><a href="https://ubuntuforums.org/showthread.php?t=2254523">https://ubuntuforums.org/showthread.php?t=2254523</a></p>
             ]]>
         </content>
     </entry>
