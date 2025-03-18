@@ -3,7 +3,7 @@
     <title>8CodeBubble</title>
     <link href="https://8codebubble.com/feed.xml" rel="self" />
     <link href="https://8codebubble.com" />
-    <updated>2025-03-17T03:51:03+09:00</updated>
+    <updated>2025-03-17T16:35:01+09:00</updated>
     <author>
         <name>ymcadmin</name>
     </author>
@@ -17,6 +17,10 @@
         <link href="https://8codebubble.com/testing-safeline-vs-bunkerweb/"/>
         <id>https://8codebubble.com/testing-safeline-vs-bunkerweb/</id>
         <media:content url="https://8codebubble.com/media/posts/25/safeline_vs_bunkerweb.png" medium="image" />
+            <category term="Security"/>
+            <category term="Kubernetes"/>
+            <category term="Docker"/>
+            <category term="Containers"/>
 
         <updated>2024-12-12T03:40:00+09:00</updated>
             <summary>
@@ -41,8 +45,8 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
 <thead>
 <tr>
 <th style="width: 23.9658%;">Feature</th>
-<th style="width: 40.0856%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-WStr9LAXevBfdkhikKx6BKooAc-shD9kCznZ5aXvSldUnK3bz9-g86SlLydvjWaJOlrEq3unbfKOWKoykG8oOgbB-noxXkp5U65whCu3jtwTWGJCNJ3QkgQpKNJ_12mnrMov8DQvjW7aISYE91_SxZsi4RRjdF_-yvT4sFqzKV66SYJTcKkYHaOLjgRt/s718/SafeLine_1_banner.png" data-is-external-image="true">SafeLine</th>
-<th style="width: 35.806%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbPYaa6aOrqssFzH8KltmWvg_9Gd4aumu8y_rhOnDOkzWuaCnk9MzX2DTq_ch520g5ZCAiGNyowdSq9HyPjpsNXbMxeUGuDhyAv1La0pBzGDTiVF7Yt2m-KbTpQWwI7L2VFZTzqFwYmhKrDLp1wcuCxpfwAJ-65bLggEnpy9TNo013LM-afyfbkrQnuom6/s16000/BunkerWeb%20.webp" width="148" height="83" data-is-external-image="true">BunkerWeb</th>
+<th style="width: 40.0856%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-WStr9LAXevBfdkhikKx6BKooAc-shD9kCznZ5aXvSldUnK3bz9-g86SlLydvjWaJOlrEq3unbfKOWKoykG8oOgbB-noxXkp5U65whCu3jtwTWGJCNJ3QkgQpKNJ_12mnrMov8DQvjW7aISYE91_SxZsi4RRjdF_-yvT4sFqzKV66SYJTcKkYHaOLjgRt/s718/SafeLine_1_banner.png" width="136" height="33" data-is-external-image="true"></th>
+<th style="width: 35.806%;"><img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbPYaa6aOrqssFzH8KltmWvg_9Gd4aumu8y_rhOnDOkzWuaCnk9MzX2DTq_ch520g5ZCAiGNyowdSq9HyPjpsNXbMxeUGuDhyAv1La0pBzGDTiVF7Yt2m-KbTpQWwI7L2VFZTzqFwYmhKrDLp1wcuCxpfwAJ-65bLggEnpy9TNo013LM-afyfbkrQnuom6/s16000/BunkerWeb%20.webp" width="128" height="72" data-is-external-image="true"></th>
 </tr>
 </thead>
 <tbody>
