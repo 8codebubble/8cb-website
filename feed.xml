@@ -3,7 +3,7 @@
     <title>8CodeBubble</title>
     <link href="https://8codebubble.com/feed.xml" rel="self" />
     <link href="https://8codebubble.com" />
-    <updated>2025-03-19T02:57:20+09:00</updated>
+    <updated>2025-03-19T05:09:06+09:00</updated>
     <author>
         <name>ymcadmin</name>
     </author>
@@ -93,6 +93,8 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
         <link href="https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/"/>
         <id>https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/</id>
         <media:content url="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" medium="image" />
+            <category term="HomeLab"/>
+            <category term="FreeBSD"/>
 
         <updated>2024-04-09T02:52:00+09:00</updated>
             <summary>

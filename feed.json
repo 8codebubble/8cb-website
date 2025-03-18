@@ -27,7 +27,7 @@
                    "Containers"
             ],
             "date_published": "2024-12-12T03:40:00+09:00",
-            "date_modified": "2025-03-17T16:35:01+09:00"
+            "date_modified": "2025-03-19T05:09:06+09:00"
         },
         {
             "id": "https://8codebubble.com/exploring-the-potential-of-upgrading-truenas-in-my-home-lab/",
@@ -40,9 +40,11 @@
                 "name": "ymcadmin"
             },
             "tags": [
+                   "HomeLab",
+                   "FreeBSD"
             ],
             "date_published": "2024-04-09T02:52:00+09:00",
-            "date_modified": "2025-03-19T02:57:20+09:00"
+            "date_modified": "2025-03-19T05:08:33+09:00"
         },
         {
             "id": "https://8codebubble.com/viewing-tech-demo-of-3d-gaussian-splatting-on-quest3/",
