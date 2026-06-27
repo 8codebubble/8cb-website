@@ -23,7 +23,7 @@
             <category term="Containers"/>
 
         <updated>2024-12-12T03:40:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/25/safeline_vs_bunkerweb.png" alt="" />
                     A Web Application Firewall (WAF) is a security solution designed to protect web applications by filtering and monitoring HTTP traffic between a web application and the internet. It acts as a shield, safeguarding applications from common vulnerabilities and attacks such as: SQL Injection: Prevents unauthorized&hellip;
@@ -97,7 +97,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="FreeBSD"/>
 
         <updated>2024-04-09T02:52:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/26/PXL_20240409_115207098.jpg" alt="" />
                     For my latest home lab project, I decided to supercharge my TrueNAS setup by integrating Monster Storage SSDs (4TB NVMe PCIe Gen4 x4) and an M.2 PCIe Adapter (ph44). This upgrade aimed to improve storage performance, reduce latency, and provide a robust solution for high-demand&hellip;
@@ -209,7 +209,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2023-11-19T03:47:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/2/cant-read-superblock3-fixitmen.jpg" alt="" />
                     I had a close call when a service refused to boot on my Kubernetes cluster. On startup the service reported a mounting error for the PV (sorry didn’t record it but it was similar to the one below) can't read superblock on /dev/sdc The main&hellip;
@@ -256,7 +256,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2023-10-30T04:06:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/3/Blog-Banners.webp" alt="" />
                     According to the article published on Netgate’s blog, the company has made some changes to its pfSense Plus software and Homelab. The changes include the removal of the pfSense Plus Community Edition and the introduction of a new pfSense Plus Home Edition¹. The new edition is designed for home users and is&hellip;
@@ -283,7 +283,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2023-10-22T04:10:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/4/it-security-services-obj.png" alt="" />
                     There are lots of useful services and application one can use in a HomeLab and here are some that I have found useful in my personal HomeLab. I use these to simulate environments and research technologies I’m interested in. PFsense: PFsense is a free and open&hellip;
@@ -324,7 +324,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2023-09-29T04:37:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/5/A-cartoon-image-of-the-Raspberry-Pi-5-OIG.jpg" alt="" />
                     The Raspberry Pi 5 was announced yesterday (Sep 28th) and is the latest and most powerful model of the popular single-board computer. CPU 2.4GHz quad-core 64-bit Arm Cortex-A76 GPU VideoCore VII RAM 4GB or 8GB LPDDR4 Display Dual 4Kp60 HDMI Wireless Dual-band 802.11ac Wi-Fi, Bluetooth&hellip;
@@ -402,7 +402,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2021-03-18T04:43:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/6/image-1.png" alt="" />
                     Quick iperf speed test between ESXI and workstation.
@@ -435,7 +435,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="Containers"/>
 
         <updated>2019-10-10T05:02:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/8/Screenshot-2023-10-16-103326.png" alt="" />
                     Description A docker container to auto update “A records” (main domain name not subdomains) for a given domain on Amazon’s AWS Route53. DockerHub Link auto-update-route53 My use case: Self-hosted services behind non-static IP address AKA your normal internet home connection. This updates the route53 A&hellip;
@@ -567,7 +567,7 @@ File Inclusion Attacks: Protects against unauthorized access to files on a serve
             <category term="HomeLab"/>
 
         <updated>2019-06-25T05:09:00+09:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://8codebubble.com/media/posts/9/OIP.jpg" alt="" />
                     The raspberry Pi foundation loves it surprises and just as they did with the Raspberry Pi 3 when they first announced it the Raspberry Pi 4 is available for purchase on the same day :). From the reviews I have read so far there is a trade&hellip;
